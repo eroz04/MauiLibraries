@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-ios</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <IsBindingProject>true</IsBindingProject>
+
+        <!--
+          Enable trim analyzers for class libraries.
+          To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
+        -->
+        <IsTrimmable>true</IsTrimmable>
+        <AssemblyName>FacebookSlim.Login.iOS</AssemblyName>
+        <RootNamespace>FacebookSlim.Login.iOS</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsPackable>true</IsPackable>
+        <PackageId>FacebookSlim.Login.iOS</PackageId>
+        <Version>1.0.0</Version>
+        <Description>Contains bindings for https://github.com/facebook/facebook-ios-sdk</Description>
+        <Authors>Authors</Authors>
+        <Company>Company</Company>
+        <PackageOutputPath>nugetoutput</PackageOutputPath>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedAllSources>true</EmbedAllSources>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui.NativeLibraryInterop.BuildTasks" Version="0.0.1-pre1">
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <NLIXCodeProjectReference Include="NativeIOS/BindingFacebook.xcodeproj">
+            <SchemeName>BindingFacebook</SchemeName>
+            <SharpieBind>false</SharpieBind>
+        </NLIXCodeProjectReference>
+    </ItemGroup>
+    
+</Project>
