@@ -13,10 +13,9 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.usurpers
 
+
+# MacStore file
 .DS_Store
-.idea
-.grade
-NativeAndroid/.gradle
 
 *.bin
 *.lock
@@ -406,3 +405,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+.idea
+
+.gradle
