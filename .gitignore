@@ -11,7 +11,15 @@
 *.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
+*.usurpers
+
+.DS_Store
+.idea
+.grade
+NativeAndroid/.gradle
+
+*.bin
+*.lock
 
 # Mono auto generated files
 mono_crash.*
