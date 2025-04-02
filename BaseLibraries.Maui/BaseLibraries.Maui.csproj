@@ -19,21 +19,20 @@
         
         <AssemblyName>BaseLibraries.Maui</AssemblyName>
         <RootNamespace>BaseLibraries</RootNamespace>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-
         <Product>$(AssemblyName) ($(TargetFramework))</Product>
-        <Version>0.1.0</Version>
         <Title>BaseLibraries</Title>
-
+        <Version>0.1.0</Version>
         <!--Assembly and Namespace info -->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageOutputPath>nugetoutput</PackageOutputPath>
         <PackageId>BaseLibraries.Maui</PackageId>
         <PackageVersion>0.1.0</PackageVersion>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageProjectUrl>https://github.com/eroz04/MauiLibraries/tree/develop/BaseLibraries.Maui</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/eroz04/MauiLibraries/tree/develop/BaseLibraries.Maui</RepositoryUrl>
-        <PackageIcon>icon.png</PackageIcon>
-        <PackageTags>xamarin, ios, android</PackageTags>
-        <PackageReadmeFile>auth_facebook.md</PackageReadmeFile>
+        <PackageProjectUrl>https://github.com/eroz04/MauiLibraries/tree/main/BaseLibraries.Maui</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/eroz04/MauiLibraries/tree/main/BaseLibraries.Maui</RepositoryUrl>
+<!--        <PackageIcon>icon.png</PackageIcon>-->
+        <PackageTags>maui, ios, android</PackageTags>
+        <PackageReadmeFile>baselibraries.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -41,6 +40,10 @@
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)"/>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="baselibraries.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 
 </Project>
